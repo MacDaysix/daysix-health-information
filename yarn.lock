@@ -3249,6 +3249,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@strapi/plugin-color-picker@npm:^5.23.4":
+  version: 5.23.4
+  resolution: "@strapi/plugin-color-picker@npm:5.23.4"
+  dependencies:
+    "@strapi/design-system": 2.0.0-rc.29
+    "@strapi/icons": 2.0.0-rc.29
+    react-colorful: 5.6.1
+    react-intl: 6.6.2
+  peerDependencies:
+    "@strapi/strapi": ^5.0.0
+    react: ^17.0.0 || ^18.0.0
+    react-dom: ^17.0.0 || ^18.0.0
+    react-router-dom: ^6.0.0
+    styled-components: ^6.0.0
+  checksum: 4ae8ccb31b115cef9789790bea92102efb372dd6f9bc5aa6a7b2a432ec845fd2a024877a3f6d1fe1268c35b4814c34204e0b2683789478a09b22c8d9405590de
+  languageName: node
+  linkType: hard
+
 "@strapi/plugin-users-permissions@npm:5.23.4":
   version: 5.23.4
   resolution: "@strapi/plugin-users-permissions@npm:5.23.4"
@@ -5978,6 +5996,7 @@ __metadata:
   resolution: "daysix-health-information@workspace:."
   dependencies:
     "@strapi/plugin-cloud": 5.23.4
+    "@strapi/plugin-color-picker": ^5.23.4
     "@strapi/plugin-users-permissions": 5.23.4
     "@strapi/strapi": 5.23.4
     "@types/node": ^20
@@ -11150,6 +11169,16 @@ __metadata:
   bin:
     rc: ./cli.js
   checksum: 2e26e052f8be2abd64e6d1dabfbd7be03f80ec18ccbc49562d31f617d0015fbdbcf0f9eed30346ea6ab789e0fdfe4337f033f8016efdbee0df5354751842080e
+  languageName: node
+  linkType: hard
+
+"react-colorful@npm:5.6.1":
+  version: 5.6.1
+  resolution: "react-colorful@npm:5.6.1"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: e432b7cb0df57e8f0bcdc3b012d2e93fcbcb6092c9e0f85654788d5ebfc4442536d8cc35b2418061ba3c4afb8b7788cc101c606d86a1732407921de7a9244c8d
   languageName: node
   linkType: hard
 

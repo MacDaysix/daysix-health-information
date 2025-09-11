@@ -384,6 +384,8 @@ export interface ApiInfoInfo extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    BackgroundColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     Content: Schema.Attribute.DynamicZone<
       ['shared.title', 'shared.paragraph', 'shared.media']
     >;
