@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "page_groups",
+  "info": {
+    "singularName": "page-group",
+    "pluralName": "page-groups",
+    "displayName": "PageGroup"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page"
+    }
+  }
+}
