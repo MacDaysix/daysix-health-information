@@ -11,10 +11,19 @@
     },
     "pluginOptions": {},
     "attributes": {
+        "Title": {
+            "type": "string",
+            "required": true
+        },
         "pages": {
             "type": "relation",
             "relation": "oneToMany",
             "target": "api::page.page"
+        },
+        "slug": {
+            "type": "string",
+            "required": true,
+            "unique": true
         }
     }
 }

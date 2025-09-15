@@ -11,6 +11,10 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
     "Content": {
       "type": "dynamiczone",
       "components": [
@@ -23,6 +27,11 @@
       "type": "customField",
       "customField": "plugin::color-picker.color",
       "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
