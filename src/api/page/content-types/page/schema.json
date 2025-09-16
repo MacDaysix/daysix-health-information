@@ -22,6 +22,12 @@
         "shared.paragraph",
         "shared.media"
       ]
+    },
+    "page_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::page-group.page-group",
+      "inversedBy": "relatedpages"
     }
   }
 }

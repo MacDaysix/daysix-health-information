@@ -15,15 +15,21 @@
       "type": "string",
       "required": true
     },
-    "pages": {
+    "relatedpages": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::page.page"
+      "target": "api::page.page",
+      "mappedBy": "page_group"
     },
     "slug": {
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "BackgroundColor": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
     }
   }
 }

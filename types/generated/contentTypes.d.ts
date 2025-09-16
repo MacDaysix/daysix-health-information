@@ -417,6 +417,8 @@ export interface ApiPageGroupPageGroup extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    BackgroundColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -426,8 +428,8 @@ export interface ApiPageGroupPageGroup extends Struct.CollectionTypeSchema {
       'api::page-group.page-group'
     > &
       Schema.Attribute.Private;
-    pages: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
     publishedAt: Schema.Attribute.DateTime;
+    relatedpages: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
@@ -458,6 +460,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'> &
       Schema.Attribute.Private;
+    page_group: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::page-group.page-group'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
